@@ -1,5 +1,5 @@
 FROM node:9.2-alpine as builder
-RUN apk add --no-cache git python make openssl tar gcc
+# RUN apk add --no-cache git python make openssl tar gcc
 ADD yapi.tgz /home/
 RUN mkdir /api && mv /home/package /api/vendors
 RUN cd /api/vendors && \

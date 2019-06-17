@@ -8,5 +8,11 @@
     "user": "root",
     "pass": "root",
     "authSource":"admin"
+  },
+  "ladpLogin": {
+      "enable": true,
+      "server": "",
+      "baseDn": "",
+      "searchStandard": ""
   }
 }

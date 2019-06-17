@@ -1,0 +1,1 @@
+db.user.insert({ "_id": 11, "study": false, "type": "site", "username": "admin", "email": "admin@admin.com", "password": "8b684c20a30954387ee53c6d18d6ac700ba3d11e", "passsalt": "9zs6xqa0d8b", "role": "admin", "add_time": 1560751659, "up_time": 1560751659, "__v": 0 })

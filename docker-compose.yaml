@@ -4,22 +4,17 @@ services:
         container_name: mongo
         image: mongo:3.2
         environment:
-            MONGO_INITDB_ROOT_USERNAME: root
-            MONGO_INITDB_ROOT_PASSWORD: root
+            MONGO_INITDB_ROOT_USERNAME: "root"
+            MONGO_INITDB_ROOT_PASSWORD: "root"
             MONGO_INITDB_DATABASE: yapi
+        volumes:
+            - ./yapi-data:/data/db
+            - ./mongo-init:/docker-entrypoint-initdb.d
 
     yapi:
         container_name: yapi
         image: yapi
         ports:
             - "3000:3000"
-    swagger-ui:
-        container_name: swagger-ui
-        image: swaggerapi/swagger-ui
-        ports:
-            - "8888:8080"
-    swagger-editor:
-        container_name: swagger-editor
-        image: swaggerapi/swagger-editor
-        ports:
-            - "9999:8080"
+        volumes:
+            - ./yapi/config.json:/api/config.json
