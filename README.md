@@ -1,5 +1,6 @@
 # docker-yapi
 使用docker部署Yapi （https://yapi.ymfe.org/index.html）
+Based on: https://github.com/dangerous1990/docker-yapi
 
 1. 克隆本项目到本地
 2. 按照项目需求修改yapi/config.json, 具体配置方式参考：https://yapi.ymfe.org/devops/index.html
