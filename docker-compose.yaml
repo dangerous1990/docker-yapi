@@ -20,3 +20,13 @@ services:
             - "3000:3000"
         volumes:
             - ./yapi/config.json:/api/config.json
+
+    nginx:
+        container_name: yapi_nginx
+        image: nginx
+        volumes:
+            - ./nginx-conf/yapi-proxy.conf:/etc/nginx/conf.d/default.conf
+            - ./nginx-conf/ssl:/etc/nginx/ssl
+        ports:
+            - "80:80"
+            - "443:443"
